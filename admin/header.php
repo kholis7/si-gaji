@@ -65,7 +65,7 @@ include "../config/koneksi.php";
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="user_data.php">Data User</a>
                         <a class="collapse-item" href="guru_data.php">Data Guru</a>
-                        <a class="collapse-item" href="jabatan_data.php">Data Jabatan</a>
+                        <a class="collapse-item" href="tugas_tambahan_data.php">Data Tugas Tambahan</a>
                     </div>
                 </div>
             </li>
