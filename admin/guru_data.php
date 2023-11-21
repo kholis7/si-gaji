@@ -20,6 +20,7 @@ include "header.php";
                 <th>NAMA GURU</th>
                 <th>NUPTK</th>
                 <th>USERNAME</th>
+                <th>TUGAS TAMBAHAN</th>
                 <th>OPSI</th>
               </tr>
             </thead>
@@ -27,6 +28,7 @@ include "header.php";
               <tr>
               <?php 
                 $dt_guru = mysqli_query($koneksi,"SELECT * FROM tb_guru
+                INNER JOIN tb_tugas_tambahan ON tb_guru.id_tugas_tambahan = tb_tugas_tambahan.id_tugas_tambahan
                 ");
                 $no = 1;
                 while ($guru=mysqli_fetch_array($dt_guru)){
@@ -35,6 +37,7 @@ include "header.php";
                 <td><?php echo $guru['nm_guru'] . ', ' . $guru['gelar']; ?></td>
                 <td><?php echo $guru['nuptk']; ?></td>
                 <td><?php echo $guru['username']; ?></td>
+                <td><?php echo $guru['nm_tugas']; ?></td>
                 <td>
                 <a href="#" class="btn btn-primary btn-icon-split btn-sm">
                   <span class="icon text-white-50">

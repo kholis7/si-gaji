@@ -75,14 +75,14 @@ include "../config/koneksi.php";
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-hdd"></i>
-                    <span>Data Pengaduan</span>
+                    <span>Honorium</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="pengaduan_verifikasi.php">Verifikasi Pengaduan</a>
-                        <a class="collapse-item" href="pengaduan_tanggapan.php">Tanggapi Pengaduan</a>
-                        <a class="collapse-item" href="pengaduan_selesai.php">Pengaduan Selesai</a>
+                        <a class="collapse-item" href="absen_guru.php">Absen Guru</a>
+                        <a class="collapse-item" href="penggajian_karyawan.php">Gaji Karyawan</a>
+                        <a class="collapse-item" href="penggajian_guru.php">Gaji Guru</a>
                     </div>
                 </div>
             </li>

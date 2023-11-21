@@ -17,22 +17,25 @@ include "header.php";
             <thead>
               <tr>
                 <th>NO</th>
-                <th>TUGAS TAMBAHAN</th>
-                <th>HONOR</th>
+                <th>NAMA GURU</th>
+                <th>KEHADIRAN</th>
+                <th>TUNJANGAN</th>
                 <th>OPSI</th>
               </tr>
             </thead>
             <tbody>
               <tr>
               <?php 
-                $dt_tgs_tambahan = mysqli_query($koneksi,"SELECT * FROM tb_tugas_tambahan
+                $dt_guru = mysqli_query($koneksi,"SELECT * FROM tb_guru
+                INNER JOIN tb_tugas_tambahan ON tb_guru.id_tugas_tambahan = tb_tugas_tambahan.id_tugas_tambahan
                 ");
                 $no = 1;
-                while ($tugas=mysqli_fetch_array($dt_tgs_tambahan)){
+                while ($guru=mysqli_fetch_array($dt_guru)){
               ?>
                 <td align="center"><?php echo $no++; ?></td>
-                <td><?php echo $tugas['nm_tugas']; ?></td>
-                <td><?php echo "Rp. ".number_format($tugas['gaji']) ." ,-"; ?></td>
+                <td><?php echo $guru['nm_guru'] . ', ' . $guru['gelar']; ?></td>
+                <td><?php echo $guru['nm_guru'] . ', ' . $guru['gelar']; ?></td>
+                <td><?php echo "Rp. ".number_format($guru['gaji']) ." ,-"; ?></td>
                 <td>
                 <a href="#" class="btn btn-primary btn-icon-split btn-sm">
                   <span class="icon text-white-50">
